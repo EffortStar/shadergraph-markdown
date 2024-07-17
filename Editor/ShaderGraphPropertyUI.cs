@@ -46,6 +46,7 @@ namespace Needle.ShaderGraphMarkdown
         private static void TryUpdateWindowMarkdown(EditorWindow wnd)
         {
             if (!ShaderGraphMarkdownSettings.instance.showMarkdownInBlackboard) return;
+            if (wnd == null) return;
 
             #if SHADERGRAPH_10_OR_NEWER
             var shaderGraphAssembly = typeof(UnityEditor.ShaderGraph.PositionControl).Assembly; // does not exist pre-2020.2
